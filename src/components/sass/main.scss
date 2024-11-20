@@ -1,0 +1,37 @@
+
+@font-face {
+  font-family:SF-Mayyun ;
+  src: url('../../fonts/SF-Mayyun.ttf');
+}
+@font-face {
+  font-family:Arslan ;
+  src: url('../../fonts/Arslan.ttf');
+}
+
+@font-face {
+  font-family:Haya ;
+  src: url('../../fonts/HAYA-Black.otf');
+}
+*{
+  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image:url('../../imgs/body-background.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: center;
+  
+}
+
+@import 'mainDiv.scss';
+@import 'slide1.scss';
+@import 'slide2.scss';
+@import 'slide3.scss';
+@import 'countDown.scss';

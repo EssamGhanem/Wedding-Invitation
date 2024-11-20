@@ -1,0 +1,141 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+
+
+
+.slide3{
+  font-family: "Fustat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    color: white;
+    margin-bottom: 50px;
+    
+  }
+
+}
+
+form{
+  width: 100%;
+  padding: 0 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content:right;
+  align-items: center;
+  
+  input[type='radio']{
+    display: none;
+    
+  }
+    
+  input[type='radio']:checked + label{
+    
+    background-color: #a05e34;
+    color: white;
+    border-radius: 5px;
+
+  }
+  input[type='text']{
+    font-family: "Fustat", sans-serif;
+    font-size: 20px;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px  #a05e34 solid;
+    padding: 5px 10px;
+    color: white;
+    text-align: right;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    &::placeholder{
+      color: rgba(255, 255, 255, 0.724);
+    }
+    
+  }
+
+
+  label{
+    font-family: "Fustat", sans-serif;
+    font-size: 10px;
+    width: 50%;
+    padding:0 5px;
+    margin: 3px;
+    
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 12px;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-weight: 800;
+    &:hover{
+      background-color: #a05e34;
+      color: white;
+      border-radius: 5px;
+
+    }
+  }
+
+
+
+
+
+  input[ type="submit"]{
+    margin-top: 20px;
+    font-family: "Fustat", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    background-color: #a05e34;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    border-radius:8px ;
+    width: 100%;
+    &:hover{
+      box-shadow: 0px 0px 12px 9px #bd9f76;;
+    }
+  }
+
+  p{
+    margin: 5px;
+    padding: 10px;
+    color:white
+  }
+}
+
+
+.coming-select{
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.235);
+  width: 100%;
+  padding: 7px;
+  appearance:none;
+  font-size: 18px;
+  font-family: "Fustat", sans-serif;
+  margin-bottom: 10px;
+  
+  &:focus-visible{
+    outline: 0px;
+  }
+
+
+
+  option{
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    font-family: "Fustat", sans-serif;
+    border-radius: 0;
+    padding: 10px 10px;
+    margin: 5px;
+  }
+}

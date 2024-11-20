@@ -1,0 +1,487 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fustat:wght@200..800&family=Lemonada:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap&text=0123456789");
+@import url("https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fustat:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap");
+@font-face {
+  font-family: SF-Mayyun;
+  src: url("../../fonts/SF-Mayyun.ttf");
+}
+@font-face {
+  font-family: Arslan;
+  src: url("../../fonts/Arslan.ttf");
+}
+@font-face {
+  font-family: Haya;
+  src: url("../../fonts/HAYA-Black.otf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../../imgs/body-background.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: center;
+}
+
+.mainDiv {
+  width: 360px;
+  height: 680px;
+  border: 10px white solid;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.446);
+  position: relative;
+}
+.mainDiv .swiperContainer {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../imgs/mainBG.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+}
+@media (max-width: 720px) {
+  .mainDiv {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    border-radius: 0px;
+  }
+}
+.mainDiv #audioButton {
+  width: 50px;
+  height: 50px;
+  background-image: url("../../imgs/sounds.png");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+  bottom: 10%;
+  left: 5%;
+  z-index: 10;
+  padding: 10px;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+@media (max-width: 720px) {
+  .mainDiv #audioButton {
+    bottom: 20%;
+  }
+}
+.mainDiv #audioButton:hover {
+  background-color: rgba(148, 76, 38, 0.5);
+}
+.mainDiv .audioOFF {
+  background-image: url("../../imgs/muted.png") !important;
+}
+.mainDiv::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../imgs/double-arrow.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 70%;
+  animation-name: arrow;
+  animation-direction: normal;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: 1s;
+  animation-delay: 1s;
+}
+@keyframes arrow {
+  0% {
+    bottom: 10%;
+  }
+  50% {
+    bottom: 12%;
+  }
+  100% {
+    bottom: 10%;
+  }
+}
+@media (min-width: 720px) {
+  @keyframes arrow {
+    0% {
+      bottom: 5%;
+    }
+    50% {
+      bottom: 7%;
+    }
+    100% {
+      bottom: 5%;
+    }
+  }
+}
+@media (max-width: 420px) {
+  @keyframes arrow {
+    0% {
+      bottom: 15%;
+    }
+    50% {
+      bottom: 17%;
+    }
+    100% {
+      bottom: 15%;
+    }
+  }
+}
+
+.swiper1 {
+  align-items: center;
+  position: relative;
+}
+.swiper1::before {
+  position: absolute;
+  content: "";
+  text-align: center;
+  top: -8px;
+  left: 50%;
+  width: 150px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: rgba(247, 243, 241, 0.7);
+  background-image: url("../../imgs/d3owa.png");
+  background-position: 50% 95%;
+  background-size: 63%;
+  background-repeat: no-repeat;
+  animation-name: d3owa;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+}
+@keyframes d3owa {
+  from {
+    top: -250px;
+  }
+  to {
+    top: -8px;
+  }
+}
+
+.slide1 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.slide1 h1 {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-size: 28px;
+  padding-top: 25%;
+}
+@media (max-width: 720px) {
+  .slide1 h1 {
+    padding-top: 25%;
+  }
+}
+.slide1 h2 {
+  font-family: "Fustat", sans-serif;
+  padding-top: 20px;
+  font-size: 20px;
+}
+.slide1 h2 span {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
+  padding: 0 10px;
+}
+.slide1 p {
+  font-size: 22px;
+  font-family: "Fustat", sans-serif;
+  margin-bottom: 5px;
+  padding: 0 30px;
+}
+.slide1 .date {
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+.slide1 .date p {
+  padding: 0 20px;
+  margin: 0;
+  font-size: 20px;
+  position: relative;
+}
+.slide1 .date p::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 3px;
+  background-color: #a05e34;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slide1 .date span {
+  font-size: 40px;
+  position: relative;
+}
+.slide1 .date span::before {
+  content: "الخميس";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  color: white;
+  font-size: 22px;
+  transform: translate(-25%, -100%);
+}
+.slide1 .date span::after {
+  width: 90px;
+  font-family: "Fustat", sans-serif;
+  content: "PM 7:30";
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  color: white;
+  font-size: 22px;
+  transform: translate(-25%, 100%);
+}
+.slide1 .barkAllah {
+  width: 90%;
+  height: 80px;
+  background-image: url("../../imgs/BarkAllah.png");
+  background-position: center;
+  background-size: 95%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+
+.imgCard {
+  width: 60%;
+  padding: 10px;
+  background-color: white;
+  transform: rotate(5deg);
+  margin-bottom: 50px;
+  transition: 1s;
+}
+.imgCard img {
+  z-index: 20;
+}
+.imgCard P {
+  padding: 10px;
+  font-family: Arslan, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.slide3 {
+  font-family: "Fustat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.slide3 h1 {
+  color: white;
+  margin-bottom: 50px;
+}
+
+form {
+  width: 100%;
+  padding: 0 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+}
+form input[type=radio] {
+  display: none;
+}
+form input[type=radio]:checked + label {
+  background-color: #a05e34;
+  color: white;
+  border-radius: 5px;
+}
+form input[type=text] {
+  font-family: "Fustat", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 2px #a05e34 solid;
+  padding: 5px 10px;
+  color: white;
+  text-align: right;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+form input[type=text]::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.724);
+}
+form input[type=text]::placeholder {
+  color: rgba(255, 255, 255, 0.724);
+}
+form label {
+  font-family: "Fustat", sans-serif;
+  font-size: 10px;
+  width: 50%;
+  padding: 0 5px;
+  margin: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 12px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-weight: 800;
+}
+form label:hover {
+  background-color: #a05e34;
+  color: white;
+  border-radius: 5px;
+}
+form input[type=submit] {
+  margin-top: 20px;
+  font-family: "Fustat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  background-color: #a05e34;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+  border-radius: 8px;
+  width: 100%;
+}
+form input[type=submit]:hover {
+  box-shadow: 0px 0px 12px 9px #bd9f76;
+}
+form p {
+  margin: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.coming-select {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.235);
+  width: 100%;
+  padding: 7px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 18px;
+  font-family: "Fustat", sans-serif;
+  margin-bottom: 10px;
+}
+.coming-select:focus-visible {
+  outline: 0px;
+}
+.coming-select option {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  font-family: "Fustat", sans-serif;
+  border-radius: 0;
+  padding: 10px 10px;
+  margin: 5px;
+}
+
+.countDown {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8588235294);
+  margin-bottom: 40px;
+}
+.countDown div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 7px;
+}
+.countDown div p {
+  font-size: 18px;
+  font-family: "DM Mono", monospace;
+  line-height: 150%;
+}
+.countDown div span {
+  text-align: center;
+  font-weight: 600;
+  font-family: "DM Mono", monospace;
+  font-size: 40px;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.474);
+  width: 65px;
+  border-radius: 5px;
+}
+
+.slide4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.slide4 a {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.slide4 .location {
+  font-family: "Fustat", sans-serif;
+  font-size: 18;
+  font-weight: bold;
+  color: #542101;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.474);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  border-right: 3px solid #a05e34;
+  border-top: 3px solid #a05e34;
+  border-bottom: 3px solid #a05e34;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.slide4 .location .locotionIcon {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../imgs/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: red;
+  filter: brightness(80%);
+  filter: grayscale(20%);
+}/*# sourceMappingURL=main.css.map */
